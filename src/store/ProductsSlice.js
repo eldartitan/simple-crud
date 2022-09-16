@@ -15,7 +15,7 @@ export const productSlice = createSlice({
       state.list = state.list.filter(f => f.id !== action.payload)
     },
     editProduct(state, action) {
-      let i = state.list.indexOf(state.list.filter(f => f.id !== action.payload.id)[0])
+      let i = state.list.indexOf(state.list.filter(f => f.id === action.payload.id)[0])
       state.list[i] = action.payload
     },
   },

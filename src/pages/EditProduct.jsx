@@ -51,9 +51,10 @@ export default function EditProduct() {
     if (name === "" || media.length === 0 || priceList.filter((f) => f.price === "").length) {
       setError(true);
     } else {
+      
       dispatch(
         editProduct({
-          id,
+          id: Number(id),
           name,
           description: value,
           status,
